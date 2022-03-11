@@ -1,0 +1,12 @@
+###### Creator 2000 ######
+
+version: 0.1             
+release date: 11/3/2022
+
+- read pdf file
+- regex filtering data
+- generate txt
+- auto open txt
+- manual txt edititng
+- generate bom.xlsx
+- creating folders
