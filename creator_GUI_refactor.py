@@ -4,10 +4,11 @@ import subprocess
 from texts import *
 from settings import *
 
-################ Main frame ################
+################ MAIN FRAME ################
 root = Tk()
 root.title(window_title)
 root.geometry(f"{WIDTH}x{HEIGHT}+{POS_X}+{POS_Y}")
+
 # Witgets
 order_label = Label(text=input_order_number)
 order_label.place(x=20, y=20)
@@ -101,5 +102,9 @@ order_btn = Button(root, text=load_order, command=getTextInput)
 order_btn.place(x=250, y=17)
 info_label = Label(root, text="")
 info_label.place(x=180, y=50)
+sig_label = Label(root, text=signature)
+sig_label.place(x=10, y=270)
+version_label = Label(root, text=version)
+version_label.place(x=340, y=270)
 
 root.mainloop()
