@@ -9,13 +9,6 @@ root = Tk()
 root.title(window_title)
 root.geometry(f"{WIDTH}x{HEIGHT}+{POS_X}+{POS_Y}")
 
-# Witgets
-order_label = Label(text=input_order_number)
-order_label.place(x=20, y=20)
-order_input = Text(root, width=10, height=1)
-order_input.place(x=170, y=22)
-alert = alert_text
-
 def getTextInput():
     ############# RETURN ORDER NUMBER ###############
     result = order_input.get(0.0, "end").rstrip()
@@ -75,7 +68,7 @@ def getTextInput():
             os.mkdir(folder_name[i])
 
 ################### XLSX ####################
-        # create XLSX
+# create XLSX
         outBOM = xlsxwriter.Workbook('bom.xlsx')
         outSheet = outBOM.add_worksheet()
 
@@ -98,6 +91,11 @@ def getTextInput():
                          command=callback)
     confirm_btn.place(x=120, y=160)
 
+#################### WIDGETS ###################
+order_label = Label(text=input_order_number)
+order_label.place(x=20, y=20)
+order_input = Text(root, width=10, height=1)
+order_input.place(x=170, y=22)
 order_btn = Button(root, text=load_order, command=getTextInput)
 order_btn.place(x=250, y=17)
 info_label = Label(root, text="")
